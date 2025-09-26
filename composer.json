@@ -1,0 +1,33 @@
+{
+    "name": "yuricronos/volt-permission",
+    "description": "A permission management system built with Livewire, Volt, and Spatie, offering a seamless way to manage user roles and access control in real-time.",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Yuricronos",
+            "email": "yuricronos@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Yuricronos\\VoltPermission\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.2|^8.3|^8.4",
+        "laravel/framework": "^12.0",
+        "laravel/tinker": "^2.10.1",
+        "livewire/flux": "^2.1.1",
+        "livewire/volt": "^1.7.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Yuricronos\\VoltPermission\\VoltPermissionServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}

@@ -1,0 +1,11 @@
+services:
+  php:
+    name: vperm_php
+    build:
+      dockerfile: ./Dockerfile
+    ports: 
+      - "9007:9000"
+    volumes:
+      - ./xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
+      - ./opcache.ini:/usr/local/etc/php/conf.d/opcache.ini
+      - ..:/var/www/html/volt-permission
