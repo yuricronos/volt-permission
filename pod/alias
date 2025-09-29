@@ -1,5 +1,5 @@
 
-alias artisan='podman exec -it -w /var/www/html/volt-permissiontest vperm_php php artisan'
+alias artisan='podman exec -it -w /var/www/html/volt-permission vperm_php php artisan'
 alias composer='podman exec -it -w /var/www/html/volt-permission vperm_php composer'
 alias laravel='podman exec -it -w /var/www/html/volt-permission vperm_php laravel'
 
