@@ -3,6 +3,8 @@
 namespace Yuricronos\VoltPermission;
 
 use Illuminate\Support\ServiceProvider;
+use Livewire\Livewire;
+use RolesComponent;
 
 class VoltPermissionServiceProvider extends ServiceProvider
 {
@@ -19,6 +21,14 @@ class VoltPermissionServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        if ($this->app->runningInConsole()) {
+            return;
+        }
+        // $this->configureRoutes();
+    }
+
+    protected function configureRoutes(): void
+    {
+        $this->loadRoutesFrom(__DIR__ . "/../routes/volt.php");
     }
 }
