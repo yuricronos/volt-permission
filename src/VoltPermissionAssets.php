@@ -49,12 +49,12 @@ class VoltPermissionAssets extends ServiceProvider
             // publish views
             $this->publishes([
                 __DIR__ . '/../resources/views' => resource_path('views'),
-            ], 'views');
+            ], 'volt-permission');
 
             // publish routes
             $this->publishes([
                 __DIR__ . '/../routes' => base_path('routes'),
-            ], 'routes');
+            ], 'volt-permission');
 
             $this->app->terminating(function () {
                 $path = base_path('routes/web.php');
